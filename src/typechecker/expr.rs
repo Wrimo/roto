@@ -913,7 +913,7 @@ impl TypeChecker {
 
                 Ok(diverges)
             }
-            Add | Sub | Mul | Div => {
+            Add | Sub | Mul | Div | Mod => {
                 let operand_ty = self.fresh_var();
                 let new_ctx = ctx.with_type(operand_ty.clone());
 
